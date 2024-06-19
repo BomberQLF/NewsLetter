@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 15px 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: hsl(234, 29%, 20%);
+}
+
+p {
+    color: hsl(234, 29%, 20%);
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.information {
+  margin-left: 10px;
+  width: 327px;
+  height: 478px;
+}
+
+.imgContainer > img {
+    width: 375px;
+    height: 284px;
+}
+
+.information img {
+    margin-right: 12px;
+}
+
+section {
+  margin: 0 auto 0 auto;
+  flex-wrap: wrap;
+  height: 842px;
+  width: 375px;
+}
+
+.itemsContainer {
+    margin-bottom: 34px;
+}
+
+input[type="text"] {
+  width: 327px;
+  height: 56px;
+  border-radius: 10px;
+}
+
+input::placeholder {
+  padding-left: 20px;
+}
+
+button {
+  width: 327px;
+  height: 56px;
+  border-radius: 10px;
+  background-color: #242742;
+  color: white;
+}
+
+label {
+    display: flex;
+    margin-bottom: 8px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+input {
+    display: flex;
+    margin-bottom: 15px;
+}

@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script defer src="index.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -13,46 +14,54 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
 
-  <section>
-    <div class="imgContainer">
-      <img src="/assets/images/illustration-sign-up-mobile.svg" alt="">
-    </div>
-    <div class="information">
-      <h1>Stay Updated!</h1>
-      <p>Join 60,000+ product managers receiving monthly updates on:</p>
-      <div class="itemsContainer">
-        <p class="items"><img src="/assets/images/icon-list.svg" alt="">Product discovery and building what matters</p>
-        <p class="items"><img src="/assets/images/icon-list.svg" alt="">Measuring to ensure updates are a success</p>
-        <p class="items"><img src="/assets/images/icon-list.svg" alt="">And much more!</p>
+  <section class="visible">
+    <div class="container">
+      <div class="imgContainer">
+        <img src="/assets/images/illustration-sign-up-mobile.svg" class="small" alt="">
+        <img src="assets/images/illustration-sign-up-desktop.svg" class="large" alt="">
       </div>
-      <div class="mailContainer">
-        <label for="email">Email address</label>
-        <input type="text" id="email" name="email" placeholder="email@company.com" required>
-        <button type="submit">Subscribe to monthly newsletter</button>
+      <div class="information">
+        <h1>Stay Updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <div class="itemsContainer">
+          <div class="items">
+            <img src="/assets/images/icon-list.svg" alt="">
+            <p>Product discovery and building what matters</p>
+          </div>
+          <div class="items">
+            <img src="/assets/images/icon-list.svg" alt="">
+            <p>Measuring to ensure updates are a success</p>
+          </div>
+          <div class="items">
+            <img src="/assets/images/icon-list.svg" alt="">
+            <p>And much more!</p>
+          </div>
+        </div>
+        <div class="mailContainer">
+          <label for="email">Email address</label>
+          <p class="error">Valid email required</p>
+          <input type="text" id="email" name="email" placeholder="email@company.com" required>
+          <button type="submit">Subscribe to monthly newsletter</button>
+        </div>
       </div>
     </div>
   </section>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <section class="hidden">
+    <img class="hiddenImg" src="assets/images/icon-list.svg" alt="">
+    <div class="details">
+      <h1>Thanks for subscribing!</h1>
+      <p>A confirmation email has been sent to <strong>ash@loremcompany.com</strong>. Please open it and click the button inside to confirm your subscription</p>
+      <div class="btn-box">
+        <button>Dismiss message</button>
+      </div>
+    </div>
+
+  </section>
 </body>
 
 </html>

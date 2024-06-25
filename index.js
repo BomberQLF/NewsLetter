@@ -5,31 +5,35 @@ document.addEventListener("DOMContentLoaded", () => {
     const error = document.getElementById('error');
     const email = document.getElementById('email');
     const button = document.getElementById('dismiss');
+    const btn = document.getElementById('btn');
     error.style.display = "none";
 
-    form.addEventListener('submit', (event) => {
-        const emailInput = email.value.trim();
+    btn.addEventListener('click', (event) => {
+        const emailInput = email.value.trim();  // Récupérer la valeur de l'email au moment de l'événement
+        console.log(emailInput);
+
         if (emailInput === '') {
-            error.textContent = 'Valid email required';
+            error.textContent = 'Veuillez entrer une adresse e-mail valide';
             error.style.display = "block"; 
             email.style.backgroundColor = '#FF6155';
+            console.log(emailInput);
             event.preventDefault();
         
         } else if (!emailInput.includes('@')) {
-            error.textContent = 'Valid email required';
+            error.textContent = 'Veuillez entrer une adresse e-mail valide';
             error.style.display = 'block';
             email.style.backgroundColor = '#FF6155';
+            console.log(emailInput);
             event.preventDefault();
-        } 
         
-        else if (!emailInput.includes('.')) {
-            error.textContent = 'Valid email required';
+        } else if (!emailInput.split('@')[1].includes(".")) {
+            error.textContent = 'Veuillez entrer une adresse e-mail valide';
             error.style.display = 'block';
             email.style.backgroundColor = '#FF6155';
+            console.log(emailInput);
             event.preventDefault();
-        }
         
-        else {
+        } else {
             error.style.display = "none";
             email.style.backgroundColor = '';
             newsLetter.style.display = "none"; 

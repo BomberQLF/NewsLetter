@@ -10,20 +10,20 @@ document.addEventListener("DOMContentLoaded", () => {
     form.addEventListener('submit', (event) => {
         const emailInput = email.value.trim();
         if (emailInput === '') {
-            error.textContent = 'Veuillez entrer une adresse e-mail valide';
+            error.textContent = 'Valid email required';
             error.style.display = "block"; 
             email.style.backgroundColor = '#FF6155';
             event.preventDefault();
         
         } else if (!emailInput.includes('@')) {
-            error.textContent = 'Veuillez entrer une adresse e-mail valide';
+            error.textContent = 'Valid email required';
             error.style.display = 'block';
             email.style.backgroundColor = '#FF6155';
             event.preventDefault();
         } 
         
         else if (!emailInput.includes('.')) {
-            error.textContent = 'Veuillez entrer une adresse e-mail valide';
+            error.textContent = 'Valid email required';
             error.style.display = 'block';
             email.style.backgroundColor = '#FF6155';
             event.preventDefault();
